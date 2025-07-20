@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MendoAPI – Datos abiertos de Mendoza</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="" alt="logo de MendoAPI">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#usos">Usos</a></li>
+                <li><a href="#endpoints">Endpoints</a></li>
+                <li><a href="#ejemplos">Ejemplos</a></li>
+                <li><a href="#sobre">Sobre el proyecto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <h1>MendoAPI</h1>
+        <p>Una API pública con datos abiertos y organizados de Mendoza, Argentina.</p>
+        <a href="#endpoints" class="btn">Explorar endpoints</a>
+        <a href="https://github.com/liobarrozo/mendoAPI" target="_blank" class="btn-secondary">Ver en GitHub</a>
+    </section>
+    <section id="usos" class="section">
+        <h2>¿Para qué sirve MendoAPI?</h2>
+        <ul class="usos-lista">
+          <li>📚 Educación: ideal para proyectos escolares o ejercicios de programación</li>
+          <li>🧭 Turismo: datos base para apps de turismo y cultura</li>
+          <li>📊 Visualizaciones: alimentar gráficos con población, superficie y regiones</li>
+          <li>🌐 Gobierno abierto: reutilización de datos sin restricciones</li>
+        </ul>
+    </section>
+    <section id="endpoints" class="section">
+        <h2>Endpoints disponibles</h2>
+        <ul class="endpoint-list">
+          <li><code>GET /api/departamentos</code> – Lista completa de departamentos</li>
+          <li><code>GET /api/departamentos/:id</code> – Datos de un departamento específico</li>
+          <li><code>GET /api/regiones</code> – Lista de regiones reconocidas</li>
+          <li><code>GET /api/regiones/:region</code> – Departamentos dentro de una región</li>
+        </ul>
+        <p class="base-url">🔗 Base URL: <code>https://mendoapi.up.railway.app</code></p>
+      </section>
+    
+</body>
+</html>
