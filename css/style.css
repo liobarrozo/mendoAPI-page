@@ -1,0 +1,55 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 8%;
+    margin-left: auto;
+    align-items: center;
+}
+
+#mendoAPI-logo{
+    margin-left: 20px;
+    margin-right: auto;
+    width: 50px;
+    height: auto;
+}
+
+ul  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul a{
+    color: black;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+ul a:hover{
+    color: rgb(185, 18, 93);
+}
+#inicio{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+h1{
+    font-size: 40px;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+#inicio a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
