@@ -6,13 +6,12 @@
     <title>MendoAPI – Datos abiertos de Mendoza</title>
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img src="images/liobarrozoLogo.png" alt="logo de MendoAPI" id="mendoAPI-logo">
+            <img src="images/isologo.png" alt="logo de MendoAPI" id="mendoAPI-logo">
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#usos">Usos</a></li>
@@ -24,20 +23,43 @@
         </nav>
     </header>
     <section id="inicio">
-        <h1>MendoAPI</h1>
-        <p>Una API pública con datos abiertos y organizados de Mendoza, Argentina.</p>
-        <a href="#endpoints" class="btn">Explorar endpoints</a>
-        <a href="https://github.com/liobarrozo/mendoAPI" target="_blank" class="btn-secondary">Ver en GitHub</a>
+        <div class="inicio__izquierda">
+            <img  id="imagen-mendoza" src="images/mendoza.jpg" alt="mendoza">
+        </div>
+        <div class="inicio__derecha">
+            <h1 class="h1-inicio">MendoAPI</h1>
+            <p class="subtitle-inicio">Una API pública con datos abiertos y organizados de Mendoza, Argentina.</p>
+            <button class="btn" onclick=""><a href="#endpoints" class="links">Explorar endpoints</a></button>
+            <button class="btn"><a class="links" href="https://github.com/liobarrozo/mendoAPI" target="_blank" class="btn-secondary">Ver en GitHub</a></button>
+        </div>
     </section>
     <section id="usos" class="section">
-        <h2>¿Para qué sirve MendoAPI?</h2>
-        <ul class="usos-lista">
-          <li>📚 Educación: ideal para proyectos escolares o ejercicios de programación</li>
-          <li>🧭 Turismo: datos base para apps de turismo y cultura</li>
-          <li>📊 Visualizaciones: alimentar gráficos con población, superficie y regiones</li>
-          <li>🌐 Gobierno abierto: reutilización de datos sin restricciones</li>
-        </ul>
-    </section>
+        <h2 class="headers" id="h2-usos">¿Para qué sirve MendoAPI?</h2>
+        <div class="usos__cards">
+            <div class="uso">
+                <div class="icono" id="icono-data"></div>
+                <h3 class="headers"> Optimización de datos en apps</h3>
+                <p class="body-text">Permite integrar información geográfica, poblacional y cultural de los departamentos de Mendoza en cualquier aplicación. Los datos son estructurados y listos para consumir, facilitando el desarrollo de soluciones relacionadas con turismo, gestión local, análisis territorial y visualización de datos.</p>
+            </div>
+            <div class="uso">
+                <div class="icono" id="icono-learn"></div>
+                <h3 class="headers">Educación digital y programación</h3>
+                <p class="body-text">Es una API ideal para que estudiantes aprendan cómo funcionan las APIs REST, sin depender de servicios externos, en un contexto local y real. Miles de chicos podrían usarla en ejercicios de programación o sus propios proyectos sobre Mendoza.</p>
+            </div>
+      
+            <div class="uso">
+                <div class="icono" id="icono-web"></div>
+                <h3 class="headers">Datos públicos accesibles</h3>
+                <p class="body-text">Es una propuesta de datos abiertos para Mendoza. Con esta herramienta, se podran desarrollar apps donde se pueda consultar información sin necesidad de registros, permisos o herramientas complejas. La transparencia y reutilización de datos se vuelven más fáciles que nunca.</p>
+            </div>
+      
+            <div class="uso">
+                <div class="icono" id="icono-setup"></div>
+                <h3 class="headers">Prototipado rápido</h3>
+                <p class="body-text">Desarrolladores y estudiantes pueden usar la API para armar prototipos funcionales de manera accesible, sin depender de bases de datos propias. Es liviana, bien documentada y pensada para facilitar un desarrollo ágil.</p>
+            </div>
+        </div>
+    </section> 
     <section id="endpoints" class="section">
         <h2>Endpoints disponibles</h2>
         <ul class="endpoint-list">
@@ -47,7 +69,8 @@
           <li><code>GET /api/regiones/:region</code> – Departamentos dentro de una región</li>
         </ul>
         <p class="base-url">🔗 Base URL: <code>https://mendoapi.up.railway.app</code></p>
-      </section>
-    
+    </section>
+    <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
