@@ -75,3 +75,10 @@ lottie.loadAnimation({
     path: 'assets/setup.json' // prototipado
   });
   
+  lottie.loadAnimation({
+    container: document.getElementById('icono-github'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'assets/github.json' // prototipado
+  });
