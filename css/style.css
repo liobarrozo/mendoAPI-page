@@ -5,6 +5,10 @@
     --color-secundary: #5E2129;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -232,9 +236,14 @@ ul a:hover{
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     align-items: center;
     flex-direction: column;
-    padding: 2.5px;
+    padding: 2.75px;
 }
 
+@media(max-width:769px){
+  .uso{
+    width: 60%;
+  }
+}
 .uso:hover{
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.08);
     transform: translateY(-4px);
@@ -269,7 +278,14 @@ ul a:hover{
 /*ENDPOINTS*/
 
 #endpoints{
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#p-endpoints{
+  width: 60%;
+  text-align: center;
 }
 .endpoints__cards {
     display: flex;
@@ -359,6 +375,11 @@ ul a:hover{
   
   /*FAQ*/
 
+  #faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .faq__contenedor {
     max-width: 900px;
     margin: 0 auto;
