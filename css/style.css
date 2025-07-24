@@ -31,11 +31,6 @@ html {
   cursor: default;
 }
 
-.btn{
-    border-width: 1px;
-    border-color: black;
-    padding: 3px;
-}
 
 .headers{
     font-family: var(--font-heading);
@@ -155,7 +150,7 @@ ul a:hover{
   }
 }
 
-
+/*INICIO*/
 
 #inicio{
     height: 80vh;
@@ -197,11 +192,54 @@ ul a:hover{
 }
 
 
-#inicio button{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.hero__botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.7rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botón primario (destacado) */
+.btn--primario {
+  font-family: var(--font-base);
+  background-color: #8e323f;
+  color: white;
+}
+
+.btn--primario:hover {
+  background-color: var(--color-secundary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 204, 0.2);
+}
+
+/* Botón secundario (GitHub, etc.) */
+.btn--secundario {
+  font-family: var(--font-base);
+  background-color: #f5f8fa;
+  color: #333;
+  border: 2px solid #ccc;
+}
+
+.btn--secundario:hover {
+  background-color: #eaeff2;
+  border-color: #999;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
 
 /*USOS*/
 #usos{
@@ -286,6 +324,12 @@ ul a:hover{
 #p-endpoints{
   width: 60%;
   text-align: center;
+}
+
+@media(max-width:769px){
+  #p-endpoints{
+    width: 80%;
+  }
 }
 .endpoints__cards {
     display: flex;
@@ -497,7 +541,7 @@ ul a:hover{
   }
   
   form button {
-    background-color: #0077cc;
+    background-color: #8e323f;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -508,7 +552,7 @@ ul a:hover{
   }
   
   form button:hover {
-    background-color: #005fa3;
+    background-color: var(--color-secundary);
   }
 
   @media (max-width: 768px) {
