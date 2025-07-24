@@ -24,6 +24,25 @@ document.querySelectorAll('.faq__pregunta').forEach(pregunta => {
   });
 });
 
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+  const sideMenu = document.getElementById('side-menu');
+  const closeBtn = document.getElementById('close-btn');
+
+  hamburgerBtn.addEventListener('click', () => {
+    sideMenu.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sideMenu.classList.remove('active');
+  });
+
+  // Cerrar el panel al hacer clic en un link del menú
+  document.querySelectorAll('.nav-links-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+    });
+  });
 lottie.loadAnimation({
     container: document.getElementById('icono-data'),
     renderer: 'svg',

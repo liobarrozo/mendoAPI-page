@@ -37,7 +37,12 @@ html {
 .navbar{
     display: flex;
     flex-direction: row;
-    padding: 15px;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -71,8 +76,77 @@ ul a{
 }
 
 ul a:hover{
-    color: rgb(185, 18, 93);
+    color: #5E2129;
 }
+
+
+.hamburger{
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #f8f8f8;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: right 0.3s ease-in-out;
+  z-index: 20;
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links-mobile {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+.nav-links-mobile li {
+  margin-bottom: 1rem;
+}
+
+.nav-links-mobile a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
 #inicio{
     height: 80vh;
     display: flex;
