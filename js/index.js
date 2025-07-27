@@ -43,6 +43,15 @@ const hamburgerBtn = document.getElementById('hamburger-btn');
       sideMenu.classList.remove('active');
     });
   });
+
+
+  lottie.loadAnimation({
+    container: document.getElementById('hero__flecha'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'assets/arrow.json' // animación para apps
+  });
 lottie.loadAnimation({
     container: document.getElementById('icono-data'),
     renderer: 'svg',
