@@ -53,6 +53,8 @@ html {
 }
 
 
+
+
 .nav-links{
     display: flex;
     flex-direction: row;
@@ -67,6 +69,17 @@ html {
     margin-right: auto;
     width: 130px;
     height: auto;
+}
+
+@media(max-width:769px){
+  .navbar{
+    padding: 1rem 1rem ;
+  }
+
+  #mendoAPI-logo{
+    margin-left: 1px;
+    width: 90px;
+  }
 }
 
 ul  {
