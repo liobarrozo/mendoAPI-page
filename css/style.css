@@ -172,11 +172,11 @@ ul a:hover{
     display: flex;
     flex-direction: column;
     
-    padding: 20px;
+    padding: 10px;
 }
 @media(max-width: 769px){
   #inicio{
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -337,9 +337,9 @@ ul a:hover{
     
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     align-items: center;
-    padding: 4rem 1rem;
+    padding: 2rem 0.5rem;
     background-color: #fdfdfd;
     text-align: center;
 }
