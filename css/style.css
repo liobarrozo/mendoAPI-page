@@ -274,6 +274,12 @@ ul a:hover{
   transition: all 0.3s ease;
 }
 
+@media (max-width: 769px){
+  .btn{
+    padding: 0.8rem 1.2rem;
+  }
+}
+
 /* Botón primario (destacado) */
 .btn--primario {
   font-family: var(--font-base);
