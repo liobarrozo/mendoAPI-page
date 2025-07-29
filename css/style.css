@@ -214,9 +214,15 @@ ul a:hover{
 
 .inicio__derecha{
     width: 60%;
-    display: flex;
     flex-direction: column;
 }
+
+
+.container__inf{
+  display: flex;
+  flex-direction: row;
+}
+
 @media(max-width:769px){
   .inicio__derecha{
     flex-direction: row;
@@ -232,6 +238,28 @@ ul a:hover{
     justify-content: flex-end;
     align-items: center;
   }
+}
+
+#hero__flecha {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 25%;
+  width: 75%;
+}
+
+@media(max-width:769px){
+  #hero__flecha{
+    height: 45%;
+  }
+}
+
+.hero__flecha:hover {
+  transform: translateY(4px);
+  transition: transform 0.3s ease;
 }
 
 
@@ -292,8 +320,6 @@ ul a:hover{
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 119, 204, 0.2);
 }
-
-/* Botón secundario (GitHub, etc.) */
 .btn--secundario {
   font-family: var(--font-base);
   background-color: #f5f8fa;
@@ -307,30 +333,6 @@ ul a:hover{
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-
-#hero__flecha {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  height: 50%;
-  width: auto;
-}
-
-@media(max-width:769px){
-  #hero__flecha{
-    height: 45%;
-  }
-}
-
-/* Opcional: animación suave en hover */
-.hero__flecha:hover {
-  transform: translateY(4px);
-  transition: transform 0.3s ease;
-}
-
-
 
 /*USOS*/
 #usos{
