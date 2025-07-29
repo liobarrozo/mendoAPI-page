@@ -254,6 +254,7 @@ ul a:hover{
 
 @media(max-width:769px){
   #hero__flecha{
+    display: flex;
     height: 45%;
   }
 }
