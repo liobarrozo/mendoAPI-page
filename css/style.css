@@ -242,13 +242,14 @@ ul a:hover{
 
 #hero__flecha {
   margin-top: 2rem;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   height: 25%;
   width: 75%;
+
 }
 
 @media(max-width:769px){
