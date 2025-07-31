@@ -162,15 +162,16 @@ ul a:hover {
 /*INICIO*/
 
 #inicio {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
-
-  padding: 10px;
+  padding-top: 5%;
 }
 @media (max-width: 769px) {
   #inicio {
     width: 95%;
+    height: 80vh;
+    padding: 10px;
   }
 }
 
@@ -179,6 +180,16 @@ ul a:hover {
   font-weight: 600;
   font-size: 40px;
   cursor: default;
+}
+
+@media (min-width: 769px) {
+  .h1-inicio {
+    font-size: 2.75rem;
+    margin-bottom: 2px;
+  }
+  .subtitle-inicio {
+    font-size: 1.15rem;
+  }
 }
 
 .subtitle-inicio {
@@ -483,6 +494,11 @@ ul a:hover {
 .conocimientos-minimos li::before {
   content: "✔️";
   margin-right: 0.5rem;
+}
+
+.h3-live {
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .endpoint-live-demo {
