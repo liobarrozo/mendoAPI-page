@@ -1,263 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MendoAPI – Datos abiertos de Mendoza</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "slpa7qsb1j");
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <img src="images/isologo.png" alt="logo de MendoAPI" id="mendoAPI-logo">
-            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">☰</button>
-            <div class="side-menu" id="side-menu">
-              <button class="close-btn" id="close-btn" aria-label="Cerrar menú">×</button>
-              <ul class="nav-links-mobile">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#usos">Usos</a></li>
-                <li><a href="#endpoints">Endpoints</a></li>
-                <li><a href="#sobre">Propuesta</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-              </ul>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#usos">Usos</a></li>
-                <li><a href="#endpoints">Endpoints</a></li>
-                <li><a href="#sobre">Propuesta</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="inicio">
-        <div class="inicio__izquierda">
-            <img  id="imagen-mendoza" src="images/mendoza.jpg" alt="mendoza">
-        </div>
-        <div class="inicio__derecha">
-            <div class="container__sup">
-              <h1 class="h1-inicio">MendoAPI</h1>
-              <p class="subtitle-inicio">Una API pública con datos abiertos y organizados de Mendoza, Argentina.</p>
-              <div class="hero__botones">
-                <a href="#endpoints" class="btn btn--primario">Explorar endpoints</a>
-                <a href="https://github.com/liobarrozo/mendoapi" target="_blank" class="btn btn--secundario">Ver en GitHub</a>
-              </div> 
-            </div>
-            <div class="container__inf">
-              <div id="hero__flecha"></div>
-            </div>
-                 
-        </div>
-    </section>
-    <section id="usos" class="section">
-        <h2 class="headers" id="h2-usos">¿Para qué sirve MendoAPI?</h2>
-        <div class="usos__cards">
-            <div class="uso">
-                <div class="icono" id="icono-data"></div>
-                <h3 class="headers"> Optimización de datos en apps</h3>
-                <p class="body-text">Permite integrar información geográfica, poblacional y cultural de los departamentos de Mendoza en cualquier aplicación. Los datos son estructurados y listos para consumir, facilitando el desarrollo de soluciones relacionadas con turismo, gestión local, análisis territorial y visualización de datos.</p>
-            </div>
-            <div class="uso">
-                <div class="icono" id="icono-learn"></div>
-                <h3 class="headers">Educación digital y programación</h3>
-                <p class="body-text">Es una API ideal para que estudiantes aprendan cómo funcionan las APIs REST, sin depender de servicios externos, en un contexto local y real. Miles de chicos podrían usarla en ejercicios de programación o sus propios proyectos sobre Mendoza.</p>
-            </div>
-      
-            <div class="uso">
-                <div class="icono" id="icono-web"></div>
-                <h3 class="headers">Datos públicos accesibles</h3>
-                <p class="body-text">Es una propuesta de datos abiertos para Mendoza. Con esta herramienta, se podran desarrollar apps donde se pueda consultar información sin necesidad de registros, permisos o herramientas complejas. La transparencia y reutilización de datos se vuelven más fáciles que nunca.</p>
-            </div>
-      
-            <div class="uso">
-                <div class="icono" id="icono-setup"></div>
-                <h3 class="headers">Prototipado rápido</h3>
-                <p class="body-text">Desarrolladores y estudiantes pueden usar la API para armar prototipos funcionales de manera accesible, sin depender de bases de datos propias. Es liviana, bien documentada y pensada para facilitar un desarrollo ágil.</p>
-            </div>
-        </div>
-    </section> 
-    <section id="endpoints" class="section">
-        <h2 class="headers" id="h2-endpoints">Endpoints disponibles</h2>
-      
-        <p class="body-text" id="p-endpoints">Consultá los diferentes datos que ofrece MendoAPI a través de sus endpoints. Todos los recursos están disponibles sin autenticación y se devuelven en formato JSON.</p>
-        <div class="uso-tecnico">
-            <h3 class="headers">🔧 ¿Qué conocimientos necesito para usar MendoAPI?</h3>
-            <p class="body-text">
-              Está pensada para desarrolladores, docentes o estudiantes con nociones en APIs REST. 
-              Para usarla correctamente se recomienda tener conocimientos básicos de:
-            </p>
-            <ul class="body-text conocimientos-minimos">
-              <li>Qué es una API y cómo se consulta</li>
-              <li>Uso de métodos HTTP</li>
-              <li>Lectura y manipulación de datos en formato JSON</li>
-              <li>JavaScript (uso de <code>fetch()</code>) o herramientas como Postman</li>
-            </ul>
-            <p class="body-text">
-            <strong>No es una aplicación visual o móvil</strong> , sino una fuente de datos que puede integrarse a sitios, proyectos o apps.
-            </p>
-          </div>
-          
-        <div class="endpoints__cards">
-            <div class="base-url endpoint-card">
-                🟢 Base URL:  
-                <code>https://api.mendoapi.com</code>
-            </div>
-          <div class="endpoint-card">
-            <code>GET /api/departamentos</code>
-            <p>Obtiene la lista completa de todos los departamentos de Mendoza.</p>
-          </div>
-    
-          <div class="endpoint-card">
-            <code>GET /api/departamentos/:id</code>
-            <p>Obtiene la información detallada de un departamento por su ID.</p>
-          </div>
-      
-          <div class="endpoint-card">
-            <code>GET /api/regiones</code>
-            <p>Devuelve el listado único de regiones existentes.</p>
-          </div>
-      
-          <div class="endpoint-card">
-            <code>GET /api/regiones/:region</code>
-            <p>Filtra todos los departamentos que pertenecen a una región específica.</p>
-          </div>
-        </div>
-      
-        
-    </section>
-    <section id="sobre" class="section">
-        <h2 id="h2-sobre" class="headers">Sobre el proyecto</h2>
-      
-        <div class="sobre__contenido">
-          <p class="body-text">
-            <strong>MendoAPI</strong> nace como una iniciativa independiente para abrir, organizar y facilitar el acceso a datos públicos de la provincia de Mendoza, Argentina. 
-          </p>
-      
-          <p class="body-text">
-            Fue desarrollada por  <a class="links a-liobarrozo" href="https://linkedin.com/in/alejo-leonel-barrozo-56b05527a?" target="_blank">Lio Barrozo</a> con el objetivo de brindar una herramienta útil para estudiantes, docentes, programadores y cualquier persona interesada en trabajar con información real del territorio mendocino.
-          </p>
-      
-          <p class="body-text">
-            A diferencia de muchas APIs genéricas, <strong>MendoAPI es local, 100% mendocino</strong>: cada dato, cada departamento y cada mejora está pensada desde y para la comunidad mendocina. Es una puerta de entrada para proyectos educativos, análisis geográficos, herramientas turísticas o desarrollos institucionales.
-          </p>
-      
-          <p class="body-text">
-            El proyecto está en crecimiento continuo, y está abierto a sugerencias, aportes y colaboración a través de su <a href="https://github.com/liobarrozo/mendoAPI" target="_blank">repositorio en GitHub</a>.
-          </p>
-      
-          <p class="body-text">
-            MendoAPI es libre, gratuita y tiene una única motivación:  <strong>que los datos sirvan para crear, aprender y conectar</strong>.
-          </p>
-        </div>
-      </section>
-      <section id="faq" class="section">
-        <h2 class="headers">Preguntas Frecuentes</h2>
-      
-        <div class="faq__contenedor">
-          
-          <div class="faq__item">
-            <button class="faq__pregunta">¿Qué es una API?</button>
-            <div class="faq__respuesta">
-              <p>Una API (Application Programming Interface) es como un mozo en un restaurante. Vos pedís algo (por ejemplo: "¿Cuántas personas viven en Luján de Cuyo?") y la API va a buscar esa información en la cocina (la base de datos) y te la trae ya lista para <strong>trabajar esos datos en tu app</strong>.
-              No necesitás saber cómo se cocinó ni entrar a la cocina. Solo hacés un pedido, y la API te responde.</p>
-            </div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__pregunta">¿Qué tipo de información ofrece MendoAPI?</button>
-            <div class="faq__respuesta">
-              <p>Proporciona datos geográficos, sociales y culturales, estructurados sobre los departamentos de Mendoza. Como por ejemplo: cantidad de habitantes, superficie total, intendente, atracciones turísticas, etc.</p>
-            </div>
-          </div>
-      
-          <div class="faq__item">
-            <button class="faq__pregunta">¿Necesito una cuenta o clave para usarla?</button>
-            <div class="faq__respuesta">
-              <p>No. Actualmente totalmente libre, sin registro, sin API keys ni límites de uso.</p>
-            </div>
-          </div>
-      
-          <div class="faq__item">
-            <button class="faq__pregunta">¿Está pensada solo para desarrolladores?</button>
-            <div class="faq__respuesta">
-              <p>Está pensada para ser útil a desarrolladores, docentes, estudiantes y cualquier persona que sepa trabajar con APIs, interesada en acceder a datos públicos de forma simple.</p>
-            </div>
-          </div>
-      
-        </div>
-      </section>
-      
-      <section id="contacto" class="section">
-        <h2 class="headers">Colaborá con MendoAPI</h2>
-      
-        <div class="contacto__contenedor">
-          
-          <!-- Columna izquierda -->
-          <div class="colaboracion">
-            <div class="title__github">
-              <div class="icono" id="icono-github"></div>
-              <h3 class="headers">Colaborá en GitHub</h3>
-            </div>
-            
-            
-            <p class="body-text">
-              ¿Tenés ideas para <strong>mejorar MendoAPI</strong>? ¿Querés sumar departamentos, datos u optimizaciones?
-              El proyecto es abierto y podés hacer aportes, sugerencias o reportar issues desde el repositorio
-            </p>
-            <a href="https://github.com/liobarrozo/mendoapi" target="_blank" class="github-btn">
-              Ir al repositorio
-            </a>
-          </div>
-      
-          <!-- Columna derecha -->
-          <div class="formulario">
-            <h3 class="headers">📬 Contacto y sugerencias</h3>
-            <form action="https://formsubmit.co/liobarrozo8@gmail.com" method="POST">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required>
-      
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required>
-      
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-      
-              <!-- Anti-spam + redirección -->
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="https://mendoapi.com/gracias.html">
-              <input type="hidden" name="_subject" value="Nuevo Mensaje desde MendoAPI">
-      
-              <button type="submit">Enviar</button>
-            </form>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__contenedor">
-          <p class="footer__texto"> <a class="a-mendoapi">© 2025 MendoAPI</a>. Hecho desde Mendoza, Argentina.</p>
-      
-          <ul class="footer__enlaces">
+      <nav class="navbar">
+        <img
+          src="images/isologo.png"
+          alt="logo de MendoAPI"
+          id="mendoAPI-logo"
+        />
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+          ☰
+        </button>
+        <div class="side-menu" id="side-menu">
+          <button class="close-btn" id="close-btn" aria-label="Cerrar menú">
+            ×
+          </button>
+          <ul class="nav-links-mobile">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#usos">Usos</a></li>
             <li><a href="#endpoints">Endpoints</a></li>
             <li><a href="#sobre">Propuesta</a></li>
-            <li><a href="https://github.com/liobarrozo/mendoAPI" target="_blank">GitHub</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-      </footer>
-      
-      
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#usos">Usos</a></li>
+          <li><a href="#endpoints">Endpoints</a></li>
+          <li><a href="#sobre">Propuesta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="inicio">
+      <div class="inicio__izquierda">
+        <img id="imagen-mendoza" src="images/mendoza.jpg" alt="mendoza" />
+      </div>
+      <div class="inicio__derecha">
+        <div class="container__sup">
+          <h1 class="h1-inicio">MendoAPI</h1>
+          <p class="subtitle-inicio">
+            Una API pública con datos abiertos y organizados de Mendoza,
+            Argentina.
+          </p>
+          <div class="hero__botones">
+            <a href="#endpoints" class="btn btn--primario"
+              >Explorar endpoints</a
+            >
+            <a
+              href="https://github.com/liobarrozo/mendoapi"
+              target="_blank"
+              class="btn btn--secundario"
+              >Ver en GitHub</a
+            >
+          </div>
+        </div>
+        <div class="container__inf">
+          <div id="hero__flecha"></div>
+        </div>
+      </div>
+    </section>
+    <section id="usos" class="section">
+      <h2 class="headers" id="h2-usos">¿Para qué sirve MendoAPI?</h2>
+      <div class="usos__cards">
+        <div class="uso">
+          <div class="icono" id="icono-data"></div>
+          <h3 class="headers">Optimización de datos en apps</h3>
+          <p class="body-text">
+            Permite integrar información geográfica, poblacional y cultural de
+            los departamentos de Mendoza en cualquier aplicación. Los datos son
+            estructurados y listos para consumir, facilitando el desarrollo de
+            soluciones relacionadas con turismo, gestión local, análisis
+            territorial y visualización de datos.
+          </p>
+        </div>
+        <div class="uso">
+          <div class="icono" id="icono-learn"></div>
+          <h3 class="headers">Educación digital y programación</h3>
+          <p class="body-text">
+            Es una API ideal para que estudiantes aprendan cómo funcionan las
+            APIs REST, sin depender de servicios externos, en un contexto local
+            y real. Miles de chicos podrían usarla en ejercicios de programación
+            o sus propios proyectos sobre Mendoza.
+          </p>
+        </div>
+
+        <div class="uso">
+          <div class="icono" id="icono-web"></div>
+          <h3 class="headers">Datos públicos accesibles</h3>
+          <p class="body-text">
+            Es una propuesta de datos abiertos para Mendoza. Con esta
+            herramienta, se podran desarrollar apps donde se pueda consultar
+            información sin necesidad de registros, permisos o herramientas
+            complejas. La transparencia y reutilización de datos se vuelven más
+            fáciles que nunca.
+          </p>
+        </div>
+
+        <div class="uso">
+          <div class="icono" id="icono-setup"></div>
+          <h3 class="headers">Prototipado rápido</h3>
+          <p class="body-text">
+            Desarrolladores y estudiantes pueden usar la API para armar
+            prototipos funcionales de manera accesible, sin depender de bases de
+            datos propias. Es liviana, bien documentada y pensada para facilitar
+            un desarrollo ágil.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="endpoints" class="section">
+      <h2 class="headers" id="h2-endpoints">Endpoints disponibles</h2>
+
+      <p class="body-text" id="p-endpoints">
+        Consultá los diferentes datos que ofrece MendoAPI a través de sus
+        endpoints. Todos los recursos están disponibles sin autenticación y se
+        devuelven en formato JSON.
+      </p>
+      <div class="uso-tecnico">
+        <h3 class="headers">
+          🔧 ¿Qué conocimientos necesito para usar MendoAPI?
+        </h3>
+        <p class="body-text">
+          Está pensada para desarrolladores, docentes o estudiantes con nociones
+          en APIs REST. Para usarla correctamente se recomienda tener
+          conocimientos básicos de:
+        </p>
+        <ul class="body-text conocimientos-minimos">
+          <li>Qué es una API y cómo se consulta</li>
+          <li>Uso de métodos HTTP</li>
+          <li>Lectura y manipulación de datos en formato JSON</li>
+          <li>
+            JavaScript (uso de <code>fetch()</code>) o herramientas como Postman
+          </li>
+        </ul>
+        <p class="body-text">
+          <strong>No es una aplicación visual o móvil</strong> , sino una fuente
+          de datos que puede integrarse a sitios, proyectos o apps.
+        </p>
+      </div>
+
+      <div class="endpoints__cards">
+        <div class="base-url endpoint-card">
+          🟢 Base URL:
+          <code>https://api.mendoapi.com</code>
+        </div>
+        <div class="endpoint-card">
+          <code>GET /api/departamentos</code>
+          <p>
+            Obtiene la lista completa de todos los departamentos de Mendoza.
+          </p>
+        </div>
+
+        <div class="endpoint-card">
+          <code>GET /api/departamentos/:id</code>
+          <p>Obtiene la información detallada de un departamento por su ID.</p>
+        </div>
+
+        <div class="endpoint-card">
+          <code>GET /api/regiones</code>
+          <p>Devuelve el listado único de regiones existentes.</p>
+        </div>
+
+        <div class="endpoint-card">
+          <code>GET /api/regiones/:region</code>
+          <p>
+            Filtra todos los departamentos que pertenecen a una región
+            específica.
+          </p>
+        </div>
+      </div>
+      <div class="endpoint-live-demo">
+        <h3 class="headers">🎯 Probá MendoAPI en vivo</h3>
+        <div class="live-endpoint">
+          <p class="endpoint-label">GET /departamentos/01</p>
+          <pre id="json-output" class="typewriter"></pre>
+        </div>
+      </div>
+    </section>
+    <section id="sobre" class="section">
+      <h2 id="h2-sobre" class="headers">Sobre el proyecto</h2>
+
+      <div class="sobre__contenido">
+        <p class="body-text">
+          <strong>MendoAPI</strong> nace como una iniciativa independiente para
+          abrir, organizar y facilitar el acceso a datos públicos de la
+          provincia de Mendoza, Argentina.
+        </p>
+
+        <p class="body-text">
+          Fue desarrollada por
+          <a
+            class="links a-liobarrozo"
+            href="https://linkedin.com/in/alejo-leonel-barrozo-56b05527a?"
+            target="_blank"
+            >Lio Barrozo</a
+          >
+          con el objetivo de brindar una herramienta útil para estudiantes,
+          docentes, programadores y cualquier persona interesada en trabajar con
+          información real del territorio mendocino.
+        </p>
+
+        <p class="body-text">
+          A diferencia de muchas APIs genéricas,
+          <strong>MendoAPI es local, 100% mendocino</strong>: cada dato, cada
+          departamento y cada mejora está pensada desde y para la comunidad
+          mendocina. Es una puerta de entrada para proyectos educativos,
+          análisis geográficos, herramientas turísticas o desarrollos
+          institucionales.
+        </p>
+
+        <p class="body-text">
+          El proyecto está en crecimiento continuo, y está abierto a
+          sugerencias, aportes y colaboración a través de su
+          <a href="https://github.com/liobarrozo/mendoAPI" target="_blank"
+            >repositorio en GitHub</a
+          >.
+        </p>
+
+        <p class="body-text">
+          MendoAPI es libre, gratuita y tiene una única motivación:
+          <strong>que los datos sirvan para crear, aprender y conectar</strong>.
+        </p>
+      </div>
+    </section>
+    <section id="faq" class="section">
+      <h2 class="headers">Preguntas Frecuentes</h2>
+
+      <div class="faq__contenedor">
+        <div class="faq__item">
+          <button class="faq__pregunta">¿Qué es una API?</button>
+          <div class="faq__respuesta">
+            <p>
+              Una API (Application Programming Interface) es como un mozo en un
+              restaurante. Vos pedís algo (por ejemplo: "¿Cuántas personas viven
+              en Luján de Cuyo?") y la API va a buscar esa información en la
+              cocina (la base de datos) y te la trae ya lista para
+              <strong>trabajar esos datos en tu app</strong>. No necesitás saber
+              cómo se cocinó ni entrar a la cocina. Solo hacés un pedido, y la
+              API te responde.
+            </p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__pregunta">
+            ¿Qué tipo de información ofrece MendoAPI?
+          </button>
+          <div class="faq__respuesta">
+            <p>
+              Proporciona datos geográficos, sociales y culturales,
+              estructurados sobre los departamentos de Mendoza. Como por
+              ejemplo: cantidad de habitantes, superficie total, intendente,
+              atracciones turísticas, etc.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__pregunta">
+            ¿Necesito una cuenta o clave para usarla?
+          </button>
+          <div class="faq__respuesta">
+            <p>
+              No. Actualmente totalmente libre, sin registro, sin API keys ni
+              límites de uso.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__pregunta">
+            ¿Está pensada solo para desarrolladores?
+          </button>
+          <div class="faq__respuesta">
+            <p>
+              Está pensada para ser útil a desarrolladores, docentes,
+              estudiantes y cualquier persona que sepa trabajar con APIs,
+              interesada en acceder a datos públicos de forma simple.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2 class="headers">Colaborá con MendoAPI</h2>
+
+      <div class="contacto__contenedor">
+        <!-- Columna izquierda -->
+        <div class="colaboracion">
+          <div class="title__github">
+            <div class="icono" id="icono-github"></div>
+            <h3 class="headers">Colaborá en GitHub</h3>
+          </div>
+
+          <p class="body-text">
+            ¿Tenés ideas para <strong>mejorar MendoAPI</strong>? ¿Querés sumar
+            departamentos, datos u optimizaciones? El proyecto es abierto y
+            podés hacer aportes, sugerencias o reportar issues desde el
+            repositorio
+          </p>
+          <a
+            href="https://github.com/liobarrozo/mendoapi"
+            target="_blank"
+            class="github-btn"
+          >
+            Ir al repositorio
+          </a>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="formulario">
+          <h3 class="headers">📬 Contacto y sugerencias</h3>
+          <form
+            action="https://formsubmit.co/liobarrozo8@gmail.com"
+            method="POST"
+          >
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <!-- Anti-spam + redirección -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://mendoapi.com/gracias.html"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo Mensaje desde MendoAPI"
+            />
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__contenedor">
+        <p class="footer__texto">
+          <a class="a-mendoapi">© 2025 MendoAPI</a>. Hecho desde Mendoza,
+          Argentina.
+        </p>
+
+        <ul class="footer__enlaces">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#usos">Usos</a></li>
+          <li><a href="#endpoints">Endpoints</a></li>
+          <li><a href="#sobre">Propuesta</a></li>
+          <li>
+            <a href="https://github.com/liobarrozo/mendoAPI" target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
     <script src="js/index.js"></script>
-</body>
+    <script src="js/livepreview_api.js"></script>
+  </body>
 </html>
