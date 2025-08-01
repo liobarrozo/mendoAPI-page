@@ -4,15 +4,12 @@ const outputEl = document.getElementById("json-output");
 fetch(endpoint)
   .then((response) => response.json())
   .then((data) => {
-    // Extraemos las atracciones para mostrarlas aparte
     const { atracciones, ...rest } = data;
 
-    // Construimos un string del JSON "rest" para tipeo
     const restJsonStr = JSON.stringify(rest, null, 2);
 
     let i = 0;
 
-    // Limpiamos el contenedor para usar innerHTML luego
     outputEl.textContent = "";
 
     function typeWriter() {

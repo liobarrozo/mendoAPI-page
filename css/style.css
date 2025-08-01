@@ -327,6 +327,10 @@ ul a:hover {
   background-color: #f5f8fa;
   color: #333;
   border: 2px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
 }
 
 .btn--secundario:hover {
@@ -334,6 +338,11 @@ ul a:hover {
   border-color: #999;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.gh-inicio {
+  height: 1.75rem;
+  width: auto;
 }
 
 /*USOS*/
@@ -645,7 +654,7 @@ ul a:hover {
   align-items: center;
 }
 
-#icono-github {
+.gh-contact {
   height: 80px;
   width: auto;
 }

@@ -81,8 +81,9 @@
               href="https://github.com/liobarrozo/mendoapi"
               target="_blank"
               class="btn btn--secundario"
-              >Ver en GitHub</a
-            >
+              >Ver en GitHub
+              <div class="gh-inicio" id="inicio__icono-github"></div
+            ></a>
           </div>
         </div>
         <div class="container__inf">
@@ -320,7 +321,7 @@
         <!-- Columna izquierda -->
         <div class="colaboracion">
           <div class="title__github">
-            <div class="icono" id="icono-github"></div>
+            <div class="icono gh-contact" id="icono-github"></div>
             <h3 class="headers">Colaborá en GitHub</h3>
           </div>
 
@@ -354,8 +355,6 @@
 
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-            <!-- Anti-spam + redirección -->
             <input type="hidden" name="_captcha" value="false" />
             <input
               type="hidden"
