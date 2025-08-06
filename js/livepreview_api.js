@@ -1,25 +1,28 @@
 const endpoint = "https://api.mendoapi.com/api/departamentos/01";
 const outputEl = document.getElementById("json-output");
+const botonEndpoint = document.getElementById("ejecutar-endpoint");
 
-fetch(endpoint)
-  .then((response) => response.json())
-  .then((data) => {
-    const { atracciones, ...rest } = data;
+botonEndpoint.addEventListener("click", () => {
+  botonEndpoint.style.display = "none";
+  fetch(endpoint)
+    .then((response) => response.json())
+    .then((data) => {
+      const { atracciones, ...rest } = data;
 
-    const restJsonStr = JSON.stringify(rest, null, 2);
+      const restJsonStr = JSON.stringify(rest, null, 2);
 
-    let i = 0;
+      let i = 0;
 
-    outputEl.textContent = "";
+      outputEl.textContent = "";
 
-    function typeWriter() {
-      if (i < restJsonStr.length) {
-        outputEl.textContent += restJsonStr.charAt(i);
-        i++;
-        setTimeout(typeWriter, 12);
-      } else {
-        // Cuando termina el tipeo del JSON normal, agregamos el details para atracciones
-        const detailsHTML = `
+      function typeWriter() {
+        if (i < restJsonStr.length) {
+          outputEl.textContent += restJsonStr.charAt(i);
+          i++;
+          setTimeout(typeWriter, 12);
+        } else {
+          // Cuando termina el tipeo del JSON normal, agregamos el details para atracciones
+          const detailsHTML = `
           <details style="margin-top: 1rem; background:#111; color:#0f0; padding:1rem; border-radius:6px;">
             <summary style="cursor:pointer; font-weight:bold;">Atracciones (${
               atracciones.length
@@ -31,12 +34,13 @@ fetch(endpoint)
             )}</pre>
           </details>
         `;
-        outputEl.insertAdjacentHTML("beforeend", detailsHTML);
+          outputEl.insertAdjacentHTML("beforeend", detailsHTML);
+        }
       }
-    }
 
-    typeWriter();
-  })
-  .catch((err) => {
-    outputEl.textContent = "Error al cargar los datos.";
-  });
+      typeWriter();
+    })
+    .catch((err) => {
+      outputEl.textContent = "Error al cargar los datos.";
+    });
+});

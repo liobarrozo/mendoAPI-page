@@ -533,6 +533,28 @@ ul a:hover {
   font-size: 0.85rem;
 }
 
+#ejecutar-endpoint {
+  background-color: #111;
+  color: #0f0;
+  font-family: monospace;
+  border: 1px solid #0f0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#ejecutar-endpoint:hover {
+  background-color: #0f0;
+  color: #111;
+}
+
+#ejecutar-endpoint:active {
+  background-color: #0c0;
+  color: #000;
+}
 .typewriter::after {
   display: inline-block;
   width: 8px;
